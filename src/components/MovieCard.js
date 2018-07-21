@@ -11,8 +11,11 @@ export default class MovieCard extends Component {
             style={styles.cardImage}
             source={{ uri: 'http://via.placeholder.com/85x120' }} />
         </View>
-        <Text
-          style={styles.cardTitle}> Movie Title </Text>
+        <View style={styles.textContainer}>
+          <Text
+            style={styles.cardTitle}> Movie Title </Text>
+          <Text style={styles.year}> Year </Text>
+        </View>
       </View >
     );
   }
@@ -27,9 +30,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: 'grey'
   },
+  textContainer: {
+    flex: 3
+  },
   cardTitle: {
-    flex: 3,
-    marginTop: 15,
+    marginTop: 20,
     fontSize: 20,
     textAlign: 'center',
     fontWeight: 'bold'
@@ -40,6 +45,11 @@ const styles = StyleSheet.create({
   cardImage: {
     height: 120,
     width: 85
+  },
+  year: {
+    textAlign: 'center',
+    fontSize: 16,
+    marginTop: 5
   }
 
 })
