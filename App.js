@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import MovieCard from './src/components/MovieCard';
 
 export default class App extends Component {
   render() {
     return (
-      <View>
+      <ScrollView>
         <Text
           style={styles.header}> Movie App </Text>
         <MovieCard />
@@ -13,7 +13,7 @@ export default class App extends Component {
         <MovieCard />
         <MovieCard />
         <MovieCard />
-      </View>
+      </ScrollView>
     );
   }
 }
