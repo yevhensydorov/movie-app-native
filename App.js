@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import MovieCard from './src/components/MovieCard';
 
 export default class App extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.header}> Movie App </Text>
+        <Text
+          style={styles.header}> Movie App </Text>
+        <MovieCard />
       </View>
     );
   }
@@ -17,6 +20,5 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     backgroundColor: 'powderblue'
-
   }
 })
