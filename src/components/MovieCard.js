@@ -9,12 +9,12 @@ export default class MovieCard extends Component {
         <View style={styles.imageContainer}>
           <Image
             style={styles.cardImage}
-            source={{ uri: 'http://via.placeholder.com/85x120' }} />
+            source={{ uri: this.props.pic }} />
         </View>
         <View style={styles.textContainer}>
           <Text
-            style={styles.cardTitle}> Movie Title </Text>
-          <Text style={styles.year}> Year </Text>
+            style={styles.cardTitle}> {this.props.title} </Text>
+          <Text style={styles.year}> {this.props.year} </Text>
         </View>
       </View >
     );

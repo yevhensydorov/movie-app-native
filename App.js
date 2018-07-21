@@ -4,7 +4,8 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  ActivityIndicator
+  ActivityIndicator,
+  ScrollView
 } from "react-native";
 import MovieCard from "./src/components/MovieCard";
 
@@ -37,18 +38,11 @@ export default class App extends Component {
           <FlatList
             data={this.state.data}
             renderItem={({ item }) => (
-              <Text style={styles.item}>
-                {item.Title} - {item.Year}
-              </Text>
+              <MovieCard title={item.Title} year={item.Year} pic={item.Poster} />
             )}
           />
         </View>
-        <Text style={styles.header}> Movie App </Text>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+
       </ScrollView>
     );
   }
