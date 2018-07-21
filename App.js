@@ -16,7 +16,7 @@ export default class App extends Component {
     };
   }
   componentDidMount() {
-    return fetch("http://www.omdbapi.com/?apikey=674ff9&s=star")
+    return fetch("https://www.omdbapi.com/?apikey=674ff9&s=star")
       .then(data => data.json())
       .then(movies => {
         this.setState({
@@ -26,29 +26,22 @@ export default class App extends Component {
       });
   }
   render() {
-    // console.log(
-    //   "data from state in render",
-    //   this.state.isLoading,
-    //   this.state.data
-    // );
     return (
       <View>
         <View>
           <Text style={styles.header}> Movie App </Text>
         </View>
-        this.state.isLoading ? (<View style={{ flex: 1, padding: 20 }}>
-          <ActivityIndicator />
-        </View>) : (<View style={{ flex: 1, paddingTop: 20 }}>
+
+        <View style={styles.container}>
           <FlatList
             data={this.state.data}
             renderItem={({ item }) => (
-              <Text>
-                {item.Title}, {item.Year}
+              <Text style={styles.item}>
+                {item.Title} - {item.Year}
               </Text>
             )}
-            keyExtractor={(item, index) => index}
           />
-        </View>)
+        </View>
       </View>
     );
   }
