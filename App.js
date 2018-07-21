@@ -9,6 +9,10 @@ export default class App extends Component {
         <Text
           style={styles.header}> Movie App </Text>
         <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
       </View>
     );
   }
