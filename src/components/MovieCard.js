@@ -9,7 +9,7 @@ export default class MovieCard extends Component {
         <View style={styles.imageContainer}>
           <Image
             style={styles.cardImage}
-            source={{ uri: 'http://via.placeholder.com/50x70' }} />
+            source={{ uri: 'http://via.placeholder.com/85x120' }} />
         </View>
         <Text
           style={styles.cardTitle}> Movie Title </Text>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     height: 120,
-    width: 90
+    width: 85
   }
 
 })
