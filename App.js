@@ -6,6 +6,7 @@ import {
   FlatList,
   ActivityIndicator
 } from "react-native";
+import MovieCard from "./src/components/MovieCard";
 
 export default class App extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      <View>
+      <ScrollView>
         <View>
           <Text style={styles.header}> Movie App </Text>
         </View>
@@ -42,7 +43,13 @@ export default class App extends Component {
             )}
           />
         </View>
-      </View>
+        <Text style={styles.header}> Movie App </Text>
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+        <MovieCard />
+      </ScrollView>
     );
   }
 }
